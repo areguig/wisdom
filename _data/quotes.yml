@@ -38,6 +38,12 @@
 - quote: Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday's code.
   author: Christopher Thompson
 
+- quote: Any fool can write code that a computer can understand. Good programmers write code that humans can understand. 
+  author: Martin Fowler
+  
+- quote: If debugging is the process of removing bugs, programming must be the process of putting them in.
+  author: Edsger Dijkstra
+  
 - quote: Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.
   author: Martin Golding
 
@@ -103,3 +109,12 @@
 
 - quote: If you remake awful software from scratch without changing the culture that created it&#58; you'll remake awful software
   author: Romeu Moura (@malk_zameth)
+  
+- quote: Good software, like wine, takes time.
+  author: Joel Spolsky
+  
+- quote: Programming is like sex. One mistake and you have to support it for the rest of your life.
+  author: Michael Sinz
+  
+- quote: First, solve the problem. Then, write the code.
+  author: John Johnson
