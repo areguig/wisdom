@@ -25,7 +25,7 @@ playStopAction = function(){
 display_quote();
 window.setInterval(function () {
     display_quote();
-}, 20000);
+}, 17000);
 
 $('body').keyup(function (e) {
     if (e.keyCode == 32) {
