@@ -17,7 +17,7 @@ title: Wise words
 email: akli.reguig@gmail.com
 description: Wise words
 
-baseurl: "/wise-words" # the subpath of your site, e.g. /blog
+baseurl: "/wisdom" # the subpath of your site, e.g. /blog
 url: "areguig.githib.io"  # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: aklireguig
 github_username:  areguig
