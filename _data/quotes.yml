@@ -1,6 +1,9 @@
 
 - quote: When life gives you lemonade, make lemons. Life’ll be all like ‘what?!’
   author: Phil Dunphy
+
+- quote: Organizations which design systems ... are constrained to produce designs which are copies of the communication structures of these organizations.
+  author: Melvin Conway
   
 - quote: Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to build bigger and better idiots. So far, the universe is winning
   author: Rick Cook
@@ -61,3 +64,42 @@
 
 - quote: When debugging, novices insert corrective code; experts remove defective code.
   author: Richard Pattis
+
+- quote: Never attribute to malice that which is adequately explained by stupidity.
+  author: Hanlon's razor
+
+- quote: A lack of automated tests is not what causes defects... a lack of system understanding is. Tests let us automate part of our understanding.
+  author: Gregory Brown‏ (@practicingdev)
+
+- quote: Software design is about deciding carefully between all the possible ways to code the same behavior.
+  author: Cyrille Martraire (@cyriux)
+
+- quote: Stop paying recruiters. Pay good trainers, hire literally anyone who seems like a hard worker and a kind person. Help them grow.
+  author: Gregory Brown‏ (@practicingdev)
+
+- quote: Everybody likes to write reusable code, and no one wants to reuse anybody else's code.
+  author: Persistent Eryn (@eryno)
+
+- quote: Without requirements or design, programming is the art of adding bugs to an empty text file.
+  author:  Louis Srygley
+
+- quote: If you can’t build monolith correctly why do you think putting network in the middle will help?
+  author: Simon Brown (@simonbrown)
+
+- quote: No language can turn a copypaste monkey into a good programmer, but a bad language can force a good programmer to do lots of copy and paste. 
+  author: Mario Fusco (@mariofusco)
+
+- quote: Design patterns are like the rules of football&#58; you have to know them to play,  but following them does not make you a good player.
+  author: Mario Fusco (@mariofusco)
+
+- quote: Obsessing on Software Craftsmanship sometime becomes a new way to procrastinate or to over-engineer at the expense of delivering value. Sigh
+  author: Cyrille Martraire (@cyriux)
+
+- quote: The only time I learn is when something is wrong.
+  author: ylorph (@ylorph)
+
+- quote: Algorithm is the word you use when you don't want to explain what your code does.
+  author: Anonymous
+
+- quote: If you remake awful software from scratch without changing the culture that created it&#58; you'll remake awful software
+  author: Romeu Moura (@malk_zameth)

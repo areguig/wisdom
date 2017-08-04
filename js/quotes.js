@@ -15,7 +15,7 @@ playStopAction = function(){
         if (play) {
             $('#play').show();
             $('#pause').hide();
-            display_quote();
+            //display_quote();
         } else {
             $('#play').hide();
             $('#pause').show();

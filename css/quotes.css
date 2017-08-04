@@ -1,6 +1,6 @@
  .blockquote {
       font-family: Georgia, serif;
-      font-size: 45px;
+      font-size: 50px;
       font-style: italic;
       margin: 0.25em 0;
       padding: .75em .5em .75em 1em;
@@ -14,13 +14,13 @@
       display: block;
       height: 0;
       content: "“";
-      margin-left: -.85em;
+      margin-left: -.81em;
       font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
       color: #999;
     }
     .cite {
       color: #999999;
-      font-size: 14px;
+      font-size: 15px;
       font-style: italic;
       display: block;
       margin-top: 5px;
@@ -48,10 +48,6 @@
     #info {
       position: fixed;
       top: 0;
-      color: gray;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      padding-right: 2%;
       padding-left: 2%;
 }
     
