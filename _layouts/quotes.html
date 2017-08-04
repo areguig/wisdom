@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ===========================
+     STYLESHEETS
+     =========================== -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <style>
+    .blockquote {
+      font-family: Georgia, serif;
+      font-size: 40px;
+      font-style: italic;
+      width: 100%;
+      margin: 0.25em 0;
+      padding: 0.35em 40px;
+      line-height: 1.45;
+      position: relative;
+      color: #383838;
+    }
+
+    .blockquote:before {
+      display: block;
+      padding-left: 10px;
+      content: "\201C";
+      font-size: 80px;
+      position: absolute;
+      left: -20px;
+      top: -20px;
+      color: #7a7a7a;
+    }
+
+    .cite {
+      color: #999999;
+      font-size: 14px;
+      display: block;
+      margin-top: 5px;
+      float: right;
+      margin-right: 20px;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content" class="container">
+    <p></p>
+    <div id='quote' class="blockquote">
+    </div>
+    <div id='author' class="cite"></div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script>
+
+    var quotes = {{ site.data.quotes | jsonify }};
+     display_quote = function () {
+      var quote = quotes[Math.floor(Math.random() * quotes.length)];
+      $('#quote').html(quote.quote);
+      $('#author').html(quote.author)
+    }
+
+    display_quote();
+    window.setInterval(function () {
+      display_quote();
+    }, 5000);
+
+   
+  </script>
+</body>
+
+</html>
