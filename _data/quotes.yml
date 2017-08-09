@@ -1,120 +1,203 @@
 
 - quote: When life gives you lemonade, make lemons. Life’ll be all like ‘what?!’
   author: Phil Dunphy
+  twitter_handle:
+  tweet_id:
 
 - quote: Organizations which design systems ... are constrained to produce designs which are copies of the communication structures of these organizations.
   author: Melvin Conway
+  twitter_handle:
+  tweet_id:
   
 - quote: Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to build bigger and better idiots. So far, the universe is winning
   author: Rick Cook
+  twitter_handle:
+  tweet_id:
  
 - quote: Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to build bigger and better idiots. So far, the universe is winning
   author: Rick Cook
+  twitter_handle:
+  tweet_id:
 
 - quote: Walking on water and developing software from a specification are easy if both are frozen.
   author: Edward V Berard
+  twitter_handle:
+  tweet_id:
   
 - quote: Don’t worry if it doesn’t work right. If everything did, you’d be out of a job.
   author: Mosher’s Law of Software Engineering
+  twitter_handle:
+  tweet_id:
  
 - quote: In the one and only true way. The object-oriented version of 'Spaghetti code' is, of course, 'Lasagna code'. (Too many layers).
   author: Roberto Waltman
+  twitter_handle:
+  tweet_id:
   
 - quote: Talk is cheap. Show me the code.
   author: Linus Torvalds
+  twitter_handle:
+  tweet_id:
   
 - quote: Perfection [in design] is achieved, not when there is nothing more to add, but when there is nothing left to take away.
   author: Antoine de Saint-Exupéry
+  twitter_handle:
+  tweet_id:
   
 - quote: You can’t have great software without a great team, and most software teams behave like dysfunctional families.
   author: Jim McCarthy
+  twitter_handle:
+  tweet_id:
  
 - quote: Programming is like kicking yourself in the face, sooner or later your nose will bleed.
   author: Kyle Woodbury
+  twitter_handle:
+  tweet_id:
   
 - quote: Measuring programming progress by lines of code is like measuring aircraft building progress by weight.
   author: Bill Gates
+  twitter_handle:
+  tweet_id:
   
 - quote: Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday's code.
   author: Christopher Thompson
+  twitter_handle:
+  tweet_id:
 
 - quote: Any fool can write code that a computer can understand. Good programmers write code that humans can understand. 
   author: Martin Fowler
+  twitter_handle: martinfowler
+  tweet_id:
   
 - quote: If debugging is the process of removing bugs, programming must be the process of putting them in.
   author: Edsger Dijkstra
+  twitter_handle:
+  tweet_id:
   
 - quote: Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.
   author: Martin Golding
+  twitter_handle:
+  tweet_id:
 
 - quote: One of the best programming skills you can have is knowing when to walk away for a while.
   author: Oscar Godson
+  twitter_handle:
+  tweet_id:
 
 - quote: Today 80% of programming is vainglorious use of bloated tech for hide misery of legacy system behind theatrical API and pompous screen.
-  author: DDD Borat‏ (@DDD_Borat)
+  author: DDD Borat‏
+  twitter_handle: DDD_Borat
+  tweet_id: "891934792165543937"
+  
 
 - quote: We write computer programs to implement solutions to problems.We read computer programs to find which problems they are solving.
-  author: Jérôme Prudent‏ (@jeromeprudent)
+  author: Jérôme Prudent‏
+  twitter_handle: jeromeprudent
+  tweet_id: "890647736424423424"
+  
 
 - quote: Think twice before you start programming or you will program twice before you start thinking.
   author: Unknown
+  twitter_handle:
+  tweet_id:
 
 - quote: If builders built buildings the way programmers wrote programs, then the first woodpecker that came along wound destroy civilization.
   author: Gerald Weinberg
+  twitter_handle:
+  tweet_id:
 
 - quote: Great leaders don't see people as a commodity to be managed to grow the $, they see $ as the commodity to be managed to grow the people.
-  author: Simon Sinek (@simonsinek)
+  author: Simon Sinek ()
+  twitter_handle: simonsinek
+  tweet_id: "874370332991336448"
+
 
 - quote: Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.
   author: Patrick McKenzie
+  twitter_handle:
+  tweet_id:
 
 - quote: When debugging, novices insert corrective code; experts remove defective code.
   author: Richard Pattis
+  twitter_handle:
+  tweet_id:
 
 - quote: Never attribute to malice that which is adequately explained by stupidity.
   author: Hanlon's razor
+  twitter_handle:
+  tweet_id:
 
 - quote: A lack of automated tests is not what causes defects... a lack of system understanding is. Tests let us automate part of our understanding.
-  author: Gregory Brown‏ (@practicingdev)
+  author: Gregory Brown‏
+  twitter_handle: practicingdev
+  tweet_id: "847792779426246656"
 
 - quote: Software design is about deciding carefully between all the possible ways to code the same behavior.
-  author: Cyrille Martraire (@cyriux)
+  author: Cyrille Martraire
+  twitter_handle: cyriux
+  tweet_id: "837246556030058496"
 
 - quote: Stop paying recruiters. Pay good trainers, hire literally anyone who seems like a hard worker and a kind person. Help them grow.
-  author: Gregory Brown‏ (@practicingdev)
+  author: Gregory Brown‏
+  twitter_handle: practicingdev
+  tweet_id: "844915842169098240"
 
 - quote: Everybody likes to write reusable code, and no one wants to reuse anybody else's code.
-  author: Persistent Eryn (@eryno)
+  author: Persistent Eryn
+  twitter_handle: eryno
+  tweet_id:
 
 - quote: Without requirements or design, programming is the art of adding bugs to an empty text file.
-  author:  Louis Srygley
+  author: Louis Srygley
+  twitter_handle:
+  tweet_id:
 
 - quote: If you can’t build monolith correctly why do you think putting network in the middle will help?
-  author: Simon Brown (@simonbrown)
+  author: Simon Brown
+  twitter_handle: simonbrown
+  tweet_id:
 
 - quote: No language can turn a copypaste monkey into a good programmer, but a bad language can force a good programmer to do lots of copy and paste. 
-  author: Mario Fusco (@mariofusco)
+  author: Mario Fusco 
+  twitter_handle: mariofusco
+  tweet_id: "790168828122726404"
 
-- quote: Design patterns are like the rules of football&#58; you have to know them to play,  but following them does not make you a good player.
-  author: Mario Fusco (@mariofusco)
+- quote: "Design patterns are like the rules of football: you have to know them to play,  but following them does not make you a good player."
+  author: Mario Fusco
+  twitter_handle: mariofusco
+  tweet_id:
 
 - quote: Obsessing on Software Craftsmanship sometime becomes a new way to procrastinate or to over-engineer at the expense of delivering value. Sigh
-  author: Cyrille Martraire (@cyriux)
+  author: Cyrille Martraire 
+  twitter_handle: cyriux
+  tweet_id: "743464138601553920"
 
 - quote: The only time I learn is when something is wrong.
-  author: ylorph (@ylorph)
+  author: ylorph 
+  twitter_handle: ylorph
+  tweet_id:
 
 - quote: Algorithm is the word you use when you don't want to explain what your code does.
   author: Anonymous
+  twitter_handle:
+  tweet_id:
 
-- quote: If you remake awful software from scratch without changing the culture that created it&#58; you'll remake awful software
-  author: Romeu Moura (@malk_zameth)
+- quote: "If you remake awful software from scratch without changing the culture that created it: you'll remake awful software"
+  author: Romeu Moura
+  twitter_handle: malk_zameth
+  tweet_id: "654710109214371841"
   
 - quote: Good software, like wine, takes time.
   author: Joel Spolsky
+  twitter_handle: spolsky
+  tweet_id:
   
 - quote: Programming is like sex. One mistake and you have to support it for the rest of your life.
   author: Michael Sinz
+  twitter_handle:
+  tweet_id:
   
 - quote: First, solve the problem. Then, write the code.
   author: John Johnson
+  twitter_handle:
+  tweet_id:

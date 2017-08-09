@@ -1,6 +1,6 @@
  .blockquote {
       font-family: Georgia, serif;
-      font-size: 50px;
+      font-size: 45px;
       font-style: italic;
       margin: 0.25em 0;
       padding: .75em .5em .75em 1em;
@@ -20,12 +20,24 @@
     }
     .cite {
       color: #999999;
-      font-size: 15px;
+      font-size: 20px;
       font-style: italic;
       display: block;
       margin-top: 5px;
       float: right;
     }
+    .tbutton{
+       position: relative;
+     
+    }
+
+    .list> li{
+        padding: 9%;
+        display:inline;
+        font-size:28px;
+        margin:-1px;
+    }
+
     html,body {
       height: 100%;
     }
