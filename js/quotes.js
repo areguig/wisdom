@@ -4,12 +4,13 @@ const T_LIKE ="https://twitter.com/intent/like?tweet_id=";
 
 var play = true;
 $('#play').show();
-$('#t_like').hide(); 
-$('#t_retweet').hide(); 
-$('#t_tweet').hide(); 
+
 
 display_quote = function () {
     if (play) {
+        $('#t_like').hide(); 
+        $('#t_retweet').hide(); 
+        $('#t_tweet').hide(); 
         var quote = quotes[Math.floor(Math.random() * quotes.length)];
         $('#quote').html(quote.quote);
         $('#author').html('— ' + quote.author)
