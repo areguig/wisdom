@@ -107,7 +107,7 @@
   tweet_id:
 
 - quote: Great leaders don't see people as a commodity to be managed to grow the $, they see $ as the commodity to be managed to grow the people.
-  author: Simon Sinek ()
+  author: Simon Sinek
   twitter_handle: simonsinek
   tweet_id: "874370332991336448"
 
@@ -201,3 +201,13 @@
   author: John Johnson
   twitter_handle:
   tweet_id:
+
+- quote: It's all talk until the code runs.
+  author: Ward Cunningham
+  twitter_handle:
+  tweet_id:
+
+- quote: The best programs are the ones written when the programmer is supposed to be working on something else.
+  author: Melinda Varian
+  twitter_handle: 
+  tweet_id: 892838165496684545

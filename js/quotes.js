@@ -14,7 +14,7 @@ display_quote = function () {
         var quote = quotes[Math.floor(Math.random() * quotes.length)];
         $('#quote').html(quote.quote);
         $('#author').html('— ' + quote.author)
-        var t_quote ='"'+quote.quote+'" - ' +(quote.twitter_handle?'@'+quote.twitter_handle:quote.author);
+        var t_quote ='"'+quote.quote+'" - ' +(quote.twitter_handle?'@'+quote.twitter_handle:quote.author) + '#wisdom';
         $('#t_tweet').attr("href", T_TWEET+t_quote);
         $('#t_tweet').show()
         if(quote.tweet_id){
