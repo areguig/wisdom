@@ -234,7 +234,10 @@
   
 - quote: Testing can only prove the presence of bugs, not their absence.
   author: Edsger Dijkstra
-  twitter_handle: thetednelson
+  twitter_handle: 
   tweet_id:
   
-  
+- quote: Programs must be written for people to read, and only incidentally for machines to execute.
+  author: Harold Abelson & Gerald Jay Sussman
+  twitter_handle: 
+  tweet_id:
