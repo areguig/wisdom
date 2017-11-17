@@ -242,7 +242,13 @@
   twitter_handle: 
   tweet_id:
   
-  - quote: Don’t forget - having legacy software is often a sign of success. Your business was successful to last long enough for your software to become legacy.
+- quote: Don’t forget - having legacy software is often a sign of success. Your business was successful to last long enough for your software to become legacy.
   author: Sam Newman
   twitter_handle: samnewman
   tweet_id: 929622273065136130
+  
+- quote: A good programmer is someone who always looks both ways before crossing a one-way street.
+  author: Douglas O. Linder
+  twitter_handle: 
+  tweet_id: 
+  
