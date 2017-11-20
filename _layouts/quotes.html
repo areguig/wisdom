@@ -14,13 +14,20 @@
 
 <body>
   <div id="content" class="container">
+      <div id="timer-c" class=" navbar  navbar-fixed-top">
+          <div id="timer" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+            <span class="sr-only"></span>
+          </div>
+        </div>
     <div id='info'>
       <div id='play' style="display:none">
         </i>
       </div>
       <div id="pause" style="display:none"><i class="fa fa-pause fa-5" aria-hidden="true"></i></div>
+      
     </div>
     <div id='quote' class="blockquote">
+
     </div>
     <div id='author' class="cite"></div>
     <div id="tbutton" class="tbutton">
@@ -35,6 +42,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <script>
     var quotes = {{ site.data.quotes | jsonify }};
+
   </script>
   <script src="js/quotes.js"></script>
   <script>
