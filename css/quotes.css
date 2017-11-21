@@ -63,14 +63,20 @@
       padding-left: 2%;
 }
 
-#timer-c{
-  background-color: transparent;
-}
-
 #timer{
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  border-width: 0 0 1px;
   height: 7px;
   background-color: #DDD;
   -webkit-box-shadow: none ;
 	-moz-box-shadow: none;
 	box-shadow: none !important;
 }
+
+#info-text{
+  opacity:0.1;
+  z-index: 1000;
+}   

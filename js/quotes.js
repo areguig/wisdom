@@ -2,26 +2,33 @@ const T_TWEET = "https://twitter.com/intent/tweet?text=";
 const T_RETWEET = "https://twitter.com/intent/retweet?tweet_id=";
 const T_LIKE ="https://twitter.com/intent/like?tweet_id=";
 
-
-const TIME_ON_SCREEN = 17;
-
-var timer_var
+var timer_in_sec=17;
 var play = true;
 $('#play').show();
 
-display_quote = function () {
+display_quote = function (hash) {
+    console.log("play = "+play)
     if (play) {
         $('#t_like').hide(); 
         $('#t_retweet').hide(); 
-        $('#t_tweet').hide(); 
-        var quote = quotes[Math.floor(Math.random() * quotes.length)];
+        $('#t_tweet').hide();
+        var quote
+        if(hash){
+            quote = quotes.find(function(q) {
+                return "#"+btoa(escape(encodeURIComponent(q.quote)))===hash
+            });
+            playStopAction()
+            console.log(quote);
+        } else {
+            quote = quotes[Math.floor(Math.random() * quotes.length)];
+        }
         $('#quote').html(quote.quote);
         $('#author').html('— ' + quote.author)
         var t_quote ='"'+quote.quote+'" - ' +(quote.twitter_handle?'@'+quote.twitter_handle:quote.author) + '#wisdom';
         $('#t_tweet').attr("href", T_TWEET+t_quote);
         $('#t_tweet').show()
 
-        //window.location.hash=encodeURI(btoa(quote.quote));
+        window.location.hash=btoa(escape(encodeURIComponent(quote.quote)))
         if(quote.tweet_id){
             $('#t_retweet').attr("href", encodeURI(T_RETWEET+''+quote.tweet_id));
             $('#t_retweet').show()
@@ -30,8 +37,7 @@ display_quote = function () {
         }
 
         $('.progress-bar').css('width','100%')
-        $('.progress-bar').attr('i',TIME_ON_SCREEN)
-       
+        $('.progress-bar').attr('i',timer_in_sec)
     }
 }
 
@@ -40,7 +46,8 @@ playStopAction = function(){
         if (play) {
             $('#play').show();
             $('#pause').hide();
-            //display_quote();
+            timer_in_sec = parseInt($("#timer-sec").val());
+            $('.progress-bar').attr('i',timer_in_sec)
         } else {
             $('#play').hide();
             $('#pause').show();
@@ -48,23 +55,22 @@ playStopAction = function(){
 }
 
 
-timer = function(totaltime){
-    setInterval(function(){    
-        i = $('.progress-bar').attr("i") 
-        if(i>=0){
-            i--
-            if(play){$('.progress-bar').css('width', (i/totaltime)*100+'%')};
-            $('.progress-bar').attr('i',i)
-            console.log(i)
-        }
-    }, 1000);
+var progressBarHandler = function(){
+    i = parseInt($('.progress-bar').attr("i"))
+    console.log(i)
+    if(play && i>0){
+        $('.progress-bar').css('width', (i/timer_in_sec)*100+'%')
+        $('.progress-bar').attr('i',i-1)
+    }else{
+        $('.progress-bar').css('width','0px')
+        console.log("reset")
+        display_quote();
+    }
 }
 
-display_quote();
-timer(TIME_ON_SCREEN-1)      
-window.setInterval(function () {
-    display_quote();
-}, TIME_ON_SCREEN*1000);
+
+display_quote(window.location.hash);
+window.setInterval(progressBarHandler,1000)      
 
 $('body').keyup(function (e) {
     if (e.keyCode == 32) {
@@ -76,4 +82,3 @@ $('body').keyup(function (e) {
 $('#quote').click(function (e) {
         playStopAction()
 });
-

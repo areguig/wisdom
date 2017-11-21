@@ -14,21 +14,19 @@
 
 <body>
   <div id="content" class="container">
-      <div id="timer-c" class=" navbar  navbar-fixed-top">
-          <div id="timer" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+          <div id="timer" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="80">
             <span class="sr-only"></span>
           </div>
-        </div>
     <div id='info'>
-      <div id='play' style="display:none">
-        </i>
-      </div>
-      <div id="pause" style="display:none"><i class="fa fa-pause fa-5" aria-hidden="true"></i></div>
-      
+          <div id="pause" class="input-group input-group-sm" style="width:6%; display:none">
+            <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-hourglass-end" aria-hidden="true"></i></span>
+            <input id="timer-sec" type="text" class="form-control" aria-describedby="sizing-addon2" value="15" focus=true>
+          </div>
+        <span id="info-text">
+          Space or click to pause/play.
+        </span>
     </div>
-    <div id='quote' class="blockquote">
-
-    </div>
+    <div id='quote' class="blockquote"></div>
     <div id='author' class="cite"></div>
     <div id="tbutton" class="tbutton">
       <ul class="list">
