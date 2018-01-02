@@ -281,3 +281,38 @@
   author: Charles Antony Richard Hoare
   twitter_handle:
   tweet_id:
+
+- quote: First do it, then do it right, then do it better.
+  author: Addy Osmani
+  twitter_handle: addyosmani
+  tweet_id: 314785735171518464
+  
+- quote: A language that doesn't affect the way you think about programming is not worth knowing.
+  author: Alan Perlis
+  twitter_handle: 
+  tweet_id: 
+  
+- quote: Progress is possible only if we train ourselves to think about programs without thinking of them as pieces of executable code.
+  author:  Edsger W. Dijkstra
+  twitter_handle: 
+  tweet_id: 
+  
+- quote: An evolving system increases its complexity unless work is done to reduce it.
+  author: Meir Lehman
+  twitter_handle: 
+  tweet_id: 
+  
+- quote: Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.
+  author: Eagleson's Law
+  twitter_handle: 
+  tweet_id: 
+  
+- quote: Much of the essence of building a program is in fact the debugging of the specification.
+  author: Fred Brooks
+  twitter_handle: 
+  tweet_id: 
+  
+- quote: In software, we rarely have meaningful requirements.  Even if we do, the only measure of success that matters is whether our solution solves the customer’s shifting idea of what their problem is.
+  author: Jeff Atwood
+  twitter_handle: codinghorror
+  tweet_id: 
