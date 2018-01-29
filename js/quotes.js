@@ -1,4 +1,4 @@
-const T_TWEET = "https://twitter.com/intent/tweet?text=";
+const T_TWEET = "https://twitter.com/intent/tweet?hashtags=wisdom";
 const T_RETWEET = "https://twitter.com/intent/retweet?tweet_id=";
 const T_LIKE ="https://twitter.com/intent/like?tweet_id=";
 
@@ -18,14 +18,16 @@ display_quote = function (hash) {
                 return "#"+btoa(escape(encodeURIComponent(q.quote)))===hash
             });
             playStopAction()
-            console.log(quote);
         } else {
             quote = quotes[Math.floor(Math.random() * quotes.length)];
         }
         $('#quote').html(quote.quote);
         $('#author').html('— ' + quote.author)
-        var t_quote ='"'+quote.quote+'" - ' +(quote.twitter_handle?'@'+quote.twitter_handle:quote.author) + '#wisdom';
-        $('#t_tweet').attr("href", T_TWEET+t_quote);
+        var t_quote ='"'+quote.quote+'" - ' +(quote.twitter_handle?'@'+quote.twitter_handle:quote.author);
+        
+        $('#t_tweet').attr("href", T_TWEET+`&text=${t_quote}&url=https://goo.gl/s8WvcX`);
+        $('meta[property="og:description"]').attr("content",t_quote)
+        $('meta[property="og:url"]').attr("content", window.location)
         $('#t_tweet').show()
 
         window.location.hash=btoa(escape(encodeURIComponent(quote.quote)))
