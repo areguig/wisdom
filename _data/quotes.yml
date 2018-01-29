@@ -316,3 +316,24 @@
   author: Jeff Atwood
   twitter_handle: codinghorror
   tweet_id: 
+  
+- quote: Talking through a design with someone is one of the best techniques we have for refining a solution. Minimum team size should be 2.
+  author: Martin Thompson
+  twitter_handle: mjpt777
+  tweet_id: 955890828588802049
+
+- quote: Delete your code that is no longer in use instead of commenting it out: somebody else could read it and discover how stupid and useless it was.
+  author: Mario Fusco
+  twitter_handle: mariofusco
+  tweet_id: 955554761566236677
+
+- quote: Agile now means, we do half of scrum poorly and use Jira.
+  author: Andy Hunt
+  twitter_handle: pragmaticandy
+  tweet_id:
+
+- quote: 50% of the computer programming is trial and error, the other 50% is copy and paste.
+  author: Pawan Sharma
+  twitter_handle: mobiledev_pawan
+  tweet_id:
+
