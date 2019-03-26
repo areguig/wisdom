@@ -25,7 +25,7 @@ display_quote = function (hash) {
         $('#author').html('— ' + quote.author)
         var t_quote ='"'+quote.quote+'" - ' +(quote.twitter_handle?'@'+quote.twitter_handle:quote.author);
         
-        $('#t_tweet').attr("href", T_TWEET+`&text=${t_quote}&url=https://goo.gl/s8WvcX`);
+        $('#t_tweet').attr("href", T_TWEET+`&text=${t_quote}&url=https://goo.gl/1H11p8`);
         $('meta[property="og:description"]').attr("content",t_quote)
         $('meta[property="og:url"]').attr("content", window.location)
         $('#t_tweet').show()
