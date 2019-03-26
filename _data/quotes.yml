@@ -170,7 +170,7 @@
 - quote: Obsessing on Software Craftsmanship sometime becomes a new way to procrastinate or to over-engineer at the expense of delivering value. Sigh
   author: Cyrille Martraire 
   twitter_handle: cyriux
-  tweet_id: "743464138601553920"
+  tweet_id: 743464138601553920
 
 - quote: The only time I learn is when something is wrong.
   author: ylorph 
@@ -366,3 +366,8 @@
   author: Michael Feathers
   twitter_handle: mfeathers
   tweet_id: 1107896780983816192
+
+- quote: I've set the wedding date. I've not asked her out yet. ---how software projects are managed.
+  author: Venkat Subramaniam
+  twitter_handle: venkat_s
+  tweet_id: 617052918491918336
