@@ -272,11 +272,6 @@
   twitter_handle: sempf
   tweet_id: 514473420277694465
   
-- quote: Saying that Java is good because it works on all platforms is like saying anal sex is good because it works on all genders.
-  author: Unknown
-  twitter_handle:
-  tweet_id:
-  
 - quote: There are two ways of constructing a software design; one way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies. The first method is far more difficult.
   author: Charles Antony Richard Hoare
   twitter_handle:
@@ -371,3 +366,48 @@
   author: Venkat Subramaniam
   twitter_handle: venkat_s
   tweet_id: 617052918491918336
+  
+- quote: The function of good software is to make the complex appear to be simple.
+  author: Grady Booch
+  twitter_handle: Grady_Booch
+  tweet_id: 1035409406068813824
+  
+- quote: A primary cause of complexity is that software vendors uncritically adopt almost any feature that users want.
+  author: Niklaus Wirth
+  twitter_handle:
+  tweet_id:
+  
+- quote: Programming isn’t about what you know; it’s about what you can figure out.
+  author: Chris Pine
+  twitter_handle:
+  tweet_id:
+  
+- quote: The difference between monoliths and services is not architectural it is a difference in deployment strategy. The decoupling of components is independent of deployment. A monolith deployment can be just as decoupled as a [micro]service deployment.
+  author: Robert C. Martin
+  twitter_handle: unclebobmartin
+  tweet_id: 1197112671058849793
+  
+- quote: If you value making it work over making it right then you will make it work by doing the wrong thing. As that continues, and the code degrades, it becomes harder and  harder to either make it work or make it right.
+  author: Robert C. Martin
+  twitter_handle: unclebobmartin
+  tweet_id: 1192725729290665984
+  
+- quote: Commenting your code is like cleaning your bathroom - you never want to do it, but it really does create a more pleasant experience for you and your guests.
+  author: Ryan Campbell
+  twitter_handle:
+  tweet_id:
+  
+- quote: Falling in love with code means falling in love with problem solving and being a part of a forever ongoing conversation.
+  author: Kathryn Barrett
+  twitter_handle:
+  tweet_id:
+  
+- quote: The first step of any project is to grossly underestimate its complexity and difficulty.
+  author: Nicoll Hunt
+  twitter_handle: nicollhunt
+  tweet_id: 457444222275436544
+
+- quote: A devops engineer walks into a bar, puts the bartender in a docker container, put kubernetes behind the bar, spins up 1000 bartenders, orders 1 beer.
+  author: Ben Burton
+  twitter_handle: bjburton
+  tweet_id: 1106908952535728128
