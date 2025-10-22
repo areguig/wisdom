@@ -13,11 +13,6 @@
   author: Rick Cook
   twitter_handle:
   tweet_id:
- 
-- quote: Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to build bigger and better idiots. So far, the universe is winning
-  author: Rick Cook
-  twitter_handle:
-  tweet_id:
 
 - quote: Walking on water and developing software from a specification are easy if both are frozen.
   author: Edward V Berard
@@ -216,12 +211,7 @@
   author: Thomas C. Gale
   twitter_handle:
   tweet_id:
-  
-- quote: You can’t have great software without a great team, and most software teams behave like dysfunctional families.
-  author: Jim McCarthy
-  twitter_handle:
-  tweet_id:
-  
+
 - quote: Learning to program has no more to do with designing interactive software than learning to touch type has to do with writing poetry.
   author: Ted Nelson
   twitter_handle: thetednelson
@@ -351,9 +341,9 @@
   author: Ellen Ullman
   twitter_handle:
   tweet_id:
- 
-- quote: You can’t solve a problem from the level of thinking that created the problem in the first place
-  author: Ellen Ullman
+
+- quote: You can't solve a problem from the level of thinking that created the problem in the first place
+  author: Albert Einstein
   twitter_handle:
   tweet_id:
   
@@ -371,37 +361,37 @@
   author: Grady Booch
   twitter_handle: Grady_Booch
   tweet_id: 1035409406068813824
-  
+
 - quote: A primary cause of complexity is that software vendors uncritically adopt almost any feature that users want.
   author: Niklaus Wirth
   twitter_handle:
   tweet_id:
-  
-- quote: Programming isn’t about what you know; it’s about what you can figure out.
+
+- quote: Programming isn't about what you know; it's about what you can figure out.
   author: Chris Pine
   twitter_handle:
   tweet_id:
-  
+
 - quote: The difference between monoliths and services is not architectural it is a difference in deployment strategy. The decoupling of components is independent of deployment. A monolith deployment can be just as decoupled as a [micro]service deployment.
   author: Robert C. Martin
   twitter_handle: unclebobmartin
   tweet_id: 1197112671058849793
-  
+
 - quote: If you value making it work over making it right then you will make it work by doing the wrong thing. As that continues, and the code degrades, it becomes harder and  harder to either make it work or make it right.
   author: Robert C. Martin
   twitter_handle: unclebobmartin
   tweet_id: 1192725729290665984
-  
+
 - quote: Commenting your code is like cleaning your bathroom - you never want to do it, but it really does create a more pleasant experience for you and your guests.
   author: Ryan Campbell
   twitter_handle:
   tweet_id:
-  
+
 - quote: Falling in love with code means falling in love with problem solving and being a part of a forever ongoing conversation.
   author: Kathryn Barrett
   twitter_handle:
   tweet_id:
-  
+
 - quote: The first step of any project is to grossly underestimate its complexity and difficulty.
   author: Nicoll Hunt
   twitter_handle: nicollhunt
@@ -411,7 +401,7 @@
   author: Ben Burton
   twitter_handle: bjburton
   tweet_id: 1106908952535728128
-  
+
 - quote: "The best way to predict the future is to invent it."
   author: Alan Kay
   twitter_handle:
@@ -477,11 +467,6 @@
   twitter_handle:
   tweet_id:
 
-- quote: "The function of good software is to make the complex appear to be simple."
-  author: Grady Booch
-  twitter_handle: Grady_Booch
-  tweet_id: 1035409406068813824
-
 - quote: "It's not at all important to get it right the first time. It's vitally important to get it right the last time."
   author: Andrew Hunt and David Thomas (The Pragmatic Programmer)
   twitter_handle:
@@ -506,8 +491,3 @@
   author: Steve Jobs
   twitter_handle:
   tweet_id:
-
-- quote: "We build our computers the way we build our cities—over time, without a plan, on top of ruins."
-  author: Ellen Ullman
-  twitter_handle:
-  tweet_id:  

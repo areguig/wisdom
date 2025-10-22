@@ -2,87 +2,93 @@
 <html lang="en">
 
 <head>
-  <link rel="icon" href="favicon.ico">
-  <!-- ===========================
-     STYLESHEETS
-     =========================== -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/quotes.css">
-  <link rel="stylesheet" href="font/css/font-awesome.min.css">
-  <link rel="me" href="https://twitter.com/twitterdev">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wisdom quotes for/from developers - A collection of insightful IT and CS quotes">
+  <meta name="author" content="Akli Reguig">
+  <title>Wise Words - Developer Wisdom Quotes</title>
 
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https:://areguig.github.com/wisdom">
-  <meta property="og:title" content="Wisdom">
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://areguig.github.io/wisdom">
+  <meta property="og:title" content="Wise Words - Developer Wisdom">
   <meta property="og:image" content="favicon.ico">
   <meta id="og_description" property="og:description" content="Wisdom quotes for/from developers">
   <meta property="og:site_name" content="Wisdom">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@aklireguig">
+  <meta name="twitter:creator" content="@aklireguig">
+
+  <!-- Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/quotes.css">
 </head>
 
 <body>
-  <div id="content" class="container">
-          <div id="timer" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="80">
-            <span class="sr-only"></span>
-          </div>
-    <div id='info'>
-          <div id="pause" class="input-group input-group-sm" style="width:8%; display:none">
-            <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-hourglass-end" aria-hidden="true"></i></span>
-            <input id="timer-sec" type="number" class="form-control" aria-describedby="sizing-addon2" value="15" focus=true>
-          </div>
-        <span id="info-text">
-          Space or click to pause/play.
+  <div id="content" class="container" role="main">
+    <!-- Progress Bar Timer -->
+    <div id="timer" class="progress-bar" role="progressbar" aria-label="Quote timer" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+      <span class="visually-hidden">Time remaining for current quote</span>
+    </div>
+
+    <!-- Info Section -->
+    <aside id="info" aria-label="Controls information">
+      <div id="pause" class="input-group input-group-sm" style="width:8%; display:none">
+        <span class="input-group-text" id="sizing-addon2">
+          <i class="fa fa-hourglass-end" aria-hidden="true"></i>
         </span>
-    </div>
-    <div id='quote' class="blockquote"></div>
-    <div id='author' class="cite"></div>
-    <div id="tbutton" class="tbutton">
+        <input id="timer-sec" type="number" class="form-control" aria-label="Timer seconds" aria-describedby="sizing-addon2" value="15" min="5" max="60">
+      </div>
+      <span id="info-text">
+        Press Space or click quote to pause/play
+      </span>
+    </aside>
+
+    <!-- Quote Display -->
+    <main>
+      <blockquote id="quote" class="blockquote" role="button" tabindex="0" aria-label="Current quote - click or press space to pause"></blockquote>
+      <cite id="author" class="cite"></cite>
+    </main>
+
+    <!-- Social Media Buttons -->
+    <nav id="tbutton" class="tbutton" aria-label="Share quote on social media">
       <ul class="list">
-        <li><a id="t_like" href="" data-size="large"><i class="fa fa-heart" aria-hidden="true" style="color: #c72a2a;"></i></a></li>
-        <li><a id="t_retweet" href="" data-size="large"><i class="fa fa-retweet" aria-hidden="true" style="color: forestgreen;"></i></a></li>
-        <li><a id="t_tweet" href="" data-size="large"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li>
+          <a id="t_like" href="#" target="_blank" rel="noopener noreferrer" aria-label="Like this quote on Twitter" style="display: none;">
+            <i class="fa-solid fa-heart" aria-hidden="true" style="color: #c72a2a;"></i>
+          </a>
+        </li>
+        <li>
+          <a id="t_retweet" href="#" target="_blank" rel="noopener noreferrer" aria-label="Retweet this quote" style="display: none;">
+            <i class="fa-solid fa-retweet" aria-hidden="true" style="color: forestgreen;"></i>
+          </a>
+        </li>
+        <li>
+          <a id="t_tweet" href="#" target="_blank" rel="noopener noreferrer" aria-label="Tweet this quote" style="display: none;">
+            <i class="fa-brands fa-twitter" aria-hidden="true" style="color: #1da1f2;"></i>
+          </a>
+        </li>
       </ul>
-    </div>
+    </nav>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  <script>
-    var quotes = {{ site.data.quotes | jsonify }};
+  <!-- Bootstrap 5 JS Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
+  <!-- Quotes Data -->
+  <script>
+    const quotes = {{ site.data.quotes | jsonify }};
   </script>
+
+  <!-- Main Application Script -->
   <script src="js/quotes.js"></script>
-  <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-76812787-1', 'auto');
-    ga('send', 'pageview', {
-      'page': '/projects/',
-      'title': 'Projects'
-    });
-  </script>
-  <script src="https://b2btagmgr.azalead.com/tag?az=aWRTdWJzY3JpYmVyPTIwMTYmaWRTaXRlPTIxMDgmb3JpZ2luPWFyZWd1aWcuZ2l0aHViLmlvJmN1c3RvbT1ub25l"
-    type="application/javascript">
-</script>
-<script>window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
-
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
-
-  return t;
-}(document, "script", "twitter-wjs"));</script>
+  <!-- Twitter Widgets -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 
 </html>
