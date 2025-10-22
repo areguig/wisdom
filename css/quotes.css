@@ -1,82 +1,257 @@
- .blockquote {
-      font-family: Georgia, serif;
-      font-size: 45px;
-      font-style: italic;
-      margin: 0.25em 0;
-      padding: .75em .5em .75em 1em;
-      line-height: 1.45;
-      position: relative;
-      color: #383838;
-      border-left: 0.5em solid #DDD;
-    }
-
-    .blockquote:before {
-      display: block;
-      height: 0;
-      content: "“";
-      margin-left: -.81em;
-      font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
-      color: #999;
-    }
-    .cite {
-      color: #999999;
-      font-size: 20px;
-      font-style: italic;
-      display: block;
-      margin-top: 5px;
-      float: right;
-    }
-    .tbutton{
-       position: relative;
-     
-    }
-
-    .list> li{
-        padding: 9%;
-        display:inline;
-        font-size:28px;
-        margin:-1px;
-    }
-
-    html,body {
-      height: 100%;
-    }
-    body {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    -webkit-animation: random 30s infinite;
-    animation: random 30s infinite;
-    }
-
-    @keyframes  random {
-        15% { background-color: aliceblue; } 
-        30% { background-color: azure; } 
-        45% { background-color: cornsilk; } 
-        60% { background-color: floralwhite; }
-        75% { background-color: whitesmoke; }  
-    }
-
-    #info {
-      position: fixed;
-      top: 7px;
-      padding-left: 2%;
+/* ===================================
+   CSS Variables for theming
+   =================================== */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #383838;
+  --quote-border: #dddddd;
+  --quote-symbol: #999999;
+  --author-color: #999999;
+  --progress-bar-bg: #dddddd;
+  --info-opacity: 0.1;
 }
 
-#timer{
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --quote-border: #444444;
+    --quote-symbol: #888888;
+    --author-color: #aaaaaa;
+    --progress-bar-bg: #333333;
+    --info-opacity: 0.3;
+  }
+}
+
+/* ===================================
+   Base Styles
+   =================================== */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  animation: backgroundChange 30s infinite;
+}
+
+/* Background color animation */
+@keyframes backgroundChange {
+  0% { background-color: var(--bg-color); }
+  15% { background-color: #f0f8ff; } /* aliceblue */
+  30% { background-color: #f0ffff; } /* azure */
+  45% { background-color: #fff8dc; } /* cornsilk */
+  60% { background-color: #fffaf0; } /* floralwhite */
+  75% { background-color: #f5f5f5; } /* whitesmoke */
+  100% { background-color: var(--bg-color); }
+}
+
+@media (prefers-color-scheme: dark) {
+  @keyframes backgroundChange {
+    0% { background-color: #1a1a1a; }
+    15% { background-color: #1a1f28; }
+    30% { background-color: #1a2028; }
+    45% { background-color: #28221a; }
+    60% { background-color: #28251a; }
+    75% { background-color: #1f1f1f; }
+    100% { background-color: #1a1a1a; }
+  }
+}
+
+/* ===================================
+   Quote Block Styles
+   =================================== */
+.blockquote {
+  font-family: Georgia, serif;
+  font-size: clamp(1.5rem, 5vw, 2.8rem); /* Responsive font size */
+  font-style: italic;
+  margin: 0.25em 0;
+  padding: 0.75em 0.5em 0.75em 1em;
+  line-height: 1.45;
+  position: relative;
+  color: var(--text-color);
+  border-left: 0.5em solid var(--quote-border);
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.3s ease;
+}
+
+.blockquote:hover {
+  transform: translateX(5px);
+  border-left-color: #0d6efd;
+}
+
+.blockquote::before {
+  display: block;
+  height: 0;
+  content: """;
+  margin-left: -0.81em;
+  font: italic 400%/1 Cochin, Georgia, "Times New Roman", serif;
+  color: var(--quote-symbol);
+}
+
+.cite {
+  color: var(--author-color);
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  font-style: italic;
+  display: block;
+  margin-top: 1rem;
+  text-align: right;
+  transition: color 0.3s ease;
+}
+
+/* ===================================
+   Twitter Button Styles
+   =================================== */
+.tbutton {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.tbutton .list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.tbutton .list > li {
+  display: inline-flex;
+}
+
+.tbutton .list > li a {
+  font-size: 1.75rem;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.tbutton .list > li a:hover {
+  transform: scale(1.2);
+}
+
+.tbutton .list > li a i {
+  transition: color 0.3s ease;
+}
+
+/* ===================================
+   Info Section
+   =================================== */
+#info {
+  position: fixed;
+  top: 7px;
+  left: 0;
+  padding-left: 2%;
+  z-index: 1000;
+}
+
+#info-text {
+  opacity: var(--info-opacity);
+  transition: opacity 0.3s ease;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+#info:hover #info-text {
+  opacity: 0.8;
+}
+
+/* ===================================
+   Progress Bar (Timer)
+   =================================== */
+#timer {
   position: fixed;
   right: 0;
   left: 0;
   top: 0;
-  border-width: 0 0 1px;
   height: 7px;
-  background-color: #DDD;
-  -webkit-box-shadow: none ;
-	-moz-box-shadow: none;
-	box-shadow: none !important;
+  background-color: var(--progress-bar-bg);
+  border: none;
+  box-shadow: none;
+  transition: width 1s linear, background-color 0.3s ease;
+  z-index: 999;
 }
 
-#info-text{
-  opacity:0.1;
-  z-index: 1000;
-}   
+/* ===================================
+   Container
+   =================================== */
+#content {
+  max-width: 900px;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* ===================================
+   Pause/Play Controls
+   =================================== */
+#pause {
+  display: none;
+}
+
+/* ===================================
+   Accessibility Improvements
+   =================================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+a:focus,
+button:focus,
+input:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+@media (max-width: 768px) {
+  .blockquote {
+    font-size: 1.5rem;
+    padding: 0.5em 0.5em 0.5em 0.8em;
+  }
+
+  .cite {
+    font-size: 1rem;
+  }
+
+  .tbutton .list > li a {
+    font-size: 1.5rem;
+  }
+
+  #content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blockquote {
+    font-size: 1.2rem;
+    border-left-width: 0.3em;
+  }
+
+  .tbutton .list {
+    gap: 1rem;
+  }
+
+  .tbutton .list > li a {
+    font-size: 1.3rem;
+  }
+}
