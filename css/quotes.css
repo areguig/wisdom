@@ -96,7 +96,7 @@ body {
   }
 }
 
-/* Ambient floating particles */
+/* Ambient floating particles - auto-animated */
 body::before {
   content: '';
   position: absolute;
@@ -105,19 +105,56 @@ body::before {
   width: 100%;
   height: 100%;
   background-image:
-    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.06) 0%, transparent 50%);
-  animation: float 30s ease-in-out infinite;
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 60% 60%, rgba(255, 255, 255, 0.06) 0%, transparent 50%);
+  animation: floatParticles 25s ease-in-out infinite;
   pointer-events: none;
 }
 
-@keyframes float {
+@keyframes floatParticles {
   0%, 100% {
-    transform: translateY(0) scale(1);
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translate(20px, -30px) scale(1.1);
+    opacity: 0.8;
   }
   50% {
-    transform: translateY(-30px) scale(1.05);
+    transform: translate(-10px, -50px) scale(1.15);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(30px, -20px) scale(1.05);
+    opacity: 0.7;
+  }
+}
+
+/* Additional ambient effect layer */
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.06) 0%, transparent 40%);
+  animation: floatParticles2 30s ease-in-out infinite reverse;
+  pointer-events: none;
+}
+
+@keyframes floatParticles2 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-20px, 20px) rotate(5deg);
+    opacity: 0.8;
   }
 }
 
@@ -342,22 +379,37 @@ main:hover {
 }
 
 #pause input {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border: none;
   border-radius: 12px;
   padding: 0.75rem 1rem;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: #1a1a2e !important;
   width: 80px;
   text-align: center;
   transition: all 0.3s ease;
+  -webkit-text-fill-color: #1a1a2e;
 }
 
 #pause input:focus {
   outline: none;
   box-shadow: 0 0 0 3px var(--accent-color);
   background: white;
+  color: #1a1a2e !important;
+}
+
+/* Firefox specific fix */
+#pause input[type="number"] {
+  -moz-appearance: textfield;
+  color: #1a1a2e !important;
+}
+
+/* Chrome/Safari specific fix */
+#pause input::-webkit-inner-spin-button,
+#pause input::-webkit-outer-spin-button {
+  opacity: 1;
+  color: #1a1a2e;
 }
 
 #pause .input-group-text {
@@ -368,7 +420,7 @@ main:hover {
 }
 
 /* ===================================
-   Social Buttons - Modern & Stylish
+   Social Buttons - Beautiful & Modern
    =================================== */
 .tbutton {
   margin-top: 3rem;
@@ -381,7 +433,7 @@ main:hover {
   margin: 0;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
@@ -389,62 +441,114 @@ main:hover {
   display: inline-flex;
 }
 
+/* Individual button styling with distinct colors */
 .tbutton .list > li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 16px var(--glass-shadow);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
   position: relative;
   overflow: hidden;
 }
 
+/* Animated gradient background */
 .tbutton .list > li a::before {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
+  inset: 0;
+  border-radius: 18px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+/* Twitter button - blue gradient */
+#t_tweet {
+  background: linear-gradient(135deg, rgba(29, 161, 242, 0.3), rgba(29, 161, 242, 0.15));
+  border-color: rgba(29, 161, 242, 0.5);
+}
+
+#t_tweet::before {
+  background: linear-gradient(135deg, #1DA1F2, #0d8bd9);
+}
+
+#t_tweet:hover {
+  border-color: #1DA1F2;
+  box-shadow:
+    0 12px 40px rgba(29, 161, 242, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Retweet button - green gradient */
+#t_retweet {
+  background: linear-gradient(135deg, rgba(23, 191, 99, 0.3), rgba(23, 191, 99, 0.15));
+  border-color: rgba(23, 191, 99, 0.5);
+}
+
+#t_retweet::before {
+  background: linear-gradient(135deg, #17BF63, #0fa855);
+}
+
+#t_retweet:hover {
+  border-color: #17BF63;
+  box-shadow:
+    0 12px 40px rgba(23, 191, 99, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Like button - red/pink gradient */
+#t_like {
+  background: linear-gradient(135deg, rgba(249, 24, 128, 0.3), rgba(249, 24, 128, 0.15));
+  border-color: rgba(249, 24, 128, 0.5);
+}
+
+#t_like::before {
+  background: linear-gradient(135deg, #F91880, #d4145a);
+}
+
+#t_like:hover {
+  border-color: #F91880;
+  box-shadow:
+    0 12px 40px rgba(249, 24, 128, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Hover effects */
+.tbutton .list > li a:hover {
+  transform: translateY(-6px) scale(1.08);
 }
 
 .tbutton .list > li a:hover::before {
-  width: 300px;
-  height: 300px;
-}
-
-.tbutton .list > li a:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 12px 32px var(--glass-shadow);
-  border-color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
 }
 
 .tbutton .list > li a:active {
-  transform: translateY(-2px) scale(1);
+  transform: translateY(-3px) scale(1.02);
 }
 
 .tbutton .list > li a i {
   position: relative;
   z-index: 1;
-  transition: transform 0.3s ease;
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .tbutton .list > li a:hover i {
-  transform: scale(1.1);
+  transform: scale(1.15);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
 /* Heart button - special animation */
@@ -454,16 +558,77 @@ main:hover {
 
 @keyframes heartBeat {
   0%, 100% {
-    transform: scale(1);
+    transform: scale(1.15);
   }
   25% {
-    transform: scale(1.2);
+    transform: scale(1.35);
   }
   50% {
-    transform: scale(1);
+    transform: scale(1.15);
   }
   75% {
-    transform: scale(1.1);
+    transform: scale(1.25);
+  }
+}
+
+/* Retweet button - rotation animation */
+#t_retweet:hover i {
+  animation: spinRetweet 0.6s ease;
+}
+
+@keyframes spinRetweet {
+  0% {
+    transform: rotate(0deg) scale(1.15);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.25);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.15);
+  }
+}
+
+/* Tweet button - pulse animation */
+#t_tweet:hover i {
+  animation: pulseTweet 0.8s ease;
+}
+
+@keyframes pulseTweet {
+  0%, 100% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.8;
+  }
+}
+
+/* Auto-animate social buttons with gentle pulse (no hover needed) */
+.tbutton .list > li:nth-child(1) a {
+  animation: gentlePulse 4s ease-in-out infinite;
+}
+
+.tbutton .list > li:nth-child(2) a {
+  animation: gentlePulse 4s ease-in-out infinite 0.5s;
+}
+
+.tbutton .list > li:nth-child(3) a {
+  animation: gentlePulse 4s ease-in-out infinite 1s;
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow:
+      0 12px 32px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
   }
 }
 
