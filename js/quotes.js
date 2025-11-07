@@ -4,7 +4,7 @@ const T_RETWEET = "https://twitter.com/intent/retweet?tweet_id=";
 const T_LIKE = "https://twitter.com/intent/like?tweet_id=";
 
 // Application state
-let timerInSec = 17;
+let timerInSec = 5;
 let isPlaying = true;
 let currentQuote = null;
 
@@ -238,24 +238,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, 5000);
 
-  // Add subtle parallax effect on mouse move
-  document.addEventListener('mousemove', (e) => {
-    const moveX = (e.clientX - window.innerWidth / 2) / 50;
-    const moveY = (e.clientY - window.innerHeight / 2) / 50;
+  // Auto-animate card with gentle breathing effect (no mouse needed)
+  const main = document.querySelector('main');
+  if (main) {
+    let animationTime = 0;
 
-    const main = document.querySelector('main');
-    if (main) {
-      main.style.transform = `perspective(1000px) rotateY(${moveX}deg) rotateX(${-moveY}deg) translateY(-4px)`;
-    }
-  });
+    // Continuous gentle animation loop
+    setInterval(() => {
+      animationTime += 0.02;
 
-  // Reset transform on mouse leave
-  document.addEventListener('mouseleave', () => {
-    const main = document.querySelector('main');
-    if (main) {
-      main.style.transform = '';
-    }
-  });
+      // Gentle floating/breathing effect
+      const floatY = Math.sin(animationTime) * 8;
+      const rotateZ = Math.sin(animationTime * 0.5) * 1;
+      const scale = 1 + Math.sin(animationTime * 0.3) * 0.01;
+
+      main.style.transform = `translateY(${floatY}px) rotateZ(${rotateZ}deg) scale(${scale})`;
+    }, 50);
+  }
 });
 
 // Add CSS for ripple effect dynamically
